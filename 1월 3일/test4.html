@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * { margin: 0; padding: 0; font: inherit; color: inherit; }
+    body{ line-height: 1; }
+    ul{ list-style: none; }
+    a{ text-decoration: none; }
+    img{ max-width: 100%; display: block; /* vertical-align: top; */}
+
+    /* common */
+
+    .blind {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      margin: -1px;
+    }
+
+
+    header {}
+    header .box1 {
+      position: relative;
+      height: 200px;
+      background: #ccc;
+    }
+    header h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    header h1 a {
+      display: block;
+      width: 100px;
+      height: 100px;
+      background: url(./logo.png) center / 100% no-repeat;
+    }
+
+    header .sns {float: left;}
+    header .login {float: right;} 
+
+    .gnb{
+      background: #888;
+      text-align: center;
+    }
+    .gnb .gnb-list{
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: top;
+      background: #f00;
+      line-height: 50px; 
+      
+    }
+    .gnb .gnb-item{
+      float: left;
+      padding: 0 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="box1">
+      <h1><a href=""><span class="blind">네이버</span></a></h1>
+      <div class="sns">sns</div>
+      <div class="login">login</div>
+    </div>
+    <nav class="gnb">
+      <ul class="gnb-list">
+        <li class="gnb-item"><a href="">menu1</a></li>
+        <li class="gnb-item"><a href="">menu2</a></li>
+        <li class="gnb-item"><a href="">menu3</a></li>
+        <li class="gnb-item"><a href="">menu4</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <style>
+    main {
+      width: 800px;
+      margin: 0 auto;
+    }
+    .sc-visual{
+      background: #ccc;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    .sc-visual .top{
+      height: 100px;
+      background: #fff;
+      margin-bottom: 10px;
+    }
+    .sc-visual .bottom{
+      background: #fff;
+      padding: 10px;
+      overflow: hidden;
+    }
+
+    .sc-visual .left{
+      float: left;
+      /*background: #00f;*/
+      width: calc(100% - 160px);
+    }
+    .sc-visual .left li {
+    float: left;
+    width: calc((100% - 20px)/3);
+    height: 100px;
+    background: #f00;
+    margin-right: 10px;
+
+  }
+    .sc-visual .left li:nth-child(3n) { margin-right: 0;}
+  
+    .sc-visual .left li:nth-child(n+4)  {
+      margin-top: 10px;
+    }
+    .sc-visual .right{
+      float: right;
+      width: 150px;
+      height: 210px;
+      background: #f00;
+    }
+
+
+  </style>
+  <main>
+    <section class="sc-visual">
+      <div class="top">top</div>
+      <div class="bottom">
+        <ul class="left">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+        </ul>
+        <div class="right">right</div>
+      </div>
+
+    </section>
+
+    <style>
+      .sc-board{
+        padding: 10px;
+        background: #ccc;
+      }
+      .sc-board ul{}
+      .sc-board ul li{}
+      .sc-board ul li+li{
+        margin-top: 10px;
+      }
+
+      .sc-board ul a{
+        display: block;
+      }
+      .sc-board ul img{
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        float: left;
+        margin-right: 10px;
+      }
+      .sc-board ul p{
+        height: 150px;
+        background: #fff;
+        overflow: hidden;
+        
+        /*
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;*/
+
+      }
+
+    </style>
+
+    <section class="sc-board">
+      <ul>
+        <li>
+          <a href="">
+            <img src="./img.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius adipisci ratione ipsa, dicta quia, temporibus quam nemo quis voluptatum ad quod eos est possimus. Dicta ut omnis perspiciatis nam veritatis doloremque, et autem dolorum at obcaecati dolor unde, nihil, praesentium cupiditate dolorem aliquid explicabo enim totam dolore repudiandae ad cumque.</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="./img.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius adipisci ratione ipsa, dicta quia, temporibus quam nemo quis voluptatum ad quod eos est possimus. Dicta ut omnis perspiciatis nam veritatis doloremque, et autem dolorum at obcaecati dolor unde, nihil, praesentium cupiditate dolorem aliquid explicabo enim totam dolore repudiandae ad cumque.</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="./img.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius adipisci ratione ipsa, dicta quia, temporibus quam nemo quis voluptatum ad quod eos est possimus. Dicta ut omnis perspiciatis nam veritatis doloremque, et autem dolorum at obcaecati dolor unde, nihil, praesentium cupiditate dolorem aliquid explicabo enim totam dolore repudiandae ad cumque.</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="./img.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius adipisci ratione ipsa, dicta quia, temporibus quam nemo quis voluptatum ad quod eos est possimus. Dicta ut omnis perspiciatis nam veritatis doloremque, et autem dolorum at obcaecati dolor unde, nihil, praesentium cupiditate dolorem aliquid explicabo enim totam dolore repudiandae ad cumque.</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer>footer</footer>
+</body>
+</html>

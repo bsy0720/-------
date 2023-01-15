@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #ccc;
+    }
+    header {
+      height: 100px;
+      background: #000;
+    }
+    main {
+      width: 800px;
+      margin: 10px auto;
+    }
+    .box1 {
+      height: 100px;
+      background: #fff;
+      margin-bottom: 10px;
+    }
+
+   
+  </style>
+
+</head>
+<body>
+  <header>header</header>
+  <main>
+
+    <div class="box1">box</div>
+
+    
+          
+      <style>
+      .box2 {
+      overflow: hidden;
+      }
+      .box2 div {
+      float: left;
+      width: calc((100% - 20px)/3);
+      height: 100px;
+      background:#fff;
+      margin-right: 10px;
+      }
+      .box2 div:last-child {
+      margin-right: 0;
+      }
+      </style>
+    <div class="box2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <style>
+      .box3 {
+        margin-top: 10px;
+      }
+      .box3 div {
+        float: left;
+        width: calc((100% - 40px)/5);
+        height: 100px;
+        background: #f00;
+        margin-right: 10px;
+  
+      }
+      .box3 div:last-of-type {
+        margin-right: 0;
+      }
+      .box3 .clear {
+        clear: both;
+        display: block;
+      }
+      </style>  
+    <div class="box3">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <span class="clear"></span>
+    </div>
+
+    <style>
+      .box4 {
+      background: #f00; 
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .box4 div {
+      float: left;
+      width: calc(50% - 5px);
+      height: 100px;
+      background: #fff;
+
+    }
+    .box4 div:last-child {
+      float: right;
+    }
+    .box4::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    </style>
+    <div class="box4">
+      <div>1</div>
+      <div>2</div>
+    </div>
+
+    <div>123123</div>
+  </main>
+</body>
+</html>
